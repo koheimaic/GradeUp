@@ -1,0 +1,5 @@
+<% @hotels.each do |hotel| %>
+  <%= link_to "#{hotel.name}", hotel_path(hotel) %>
+  <%= hotel.place %>
+  <%= hotel.vacancy %>
+<% end %>

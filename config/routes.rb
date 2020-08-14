@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :hotsprings
   resources :restaurants
   resources :transportations
+  resources :choice
 end
