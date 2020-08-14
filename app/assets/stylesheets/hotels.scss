@@ -1,3 +1,53 @@
 // Place all the styles related to the hotels controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+.hotel_view {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  padding: 30px;
+}
+.hotel_view_in {
+  padding-left: 20px;
+}
+.hotel_view img{
+  width: 200px;
+  height: 200px;
+}
+
+.hotel_info {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.hotel_select_reserve {
+  background-color: purple;
+  color: #fff;
+  padding: 5px;
+  text-align: right;
+}
+
+
+
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+.hotel{
+  height: 400px;
+  padding: 20px;
+}
+.hotel_info{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.hotel_img{
+  width: 200px;
+  height: 200px;
+  padding-right: 30px;
+}

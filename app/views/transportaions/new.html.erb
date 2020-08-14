@@ -1,4 +1,17 @@
-<%= form_tag(new_choice_path,:method => 'get') do %>
-  <%= text_field_tag :search %>
-  <%= submit_tag '詳細情報' %>
-<% end %>
+<!DOCTYPE html>
+<html lang = "ja">
+    <head>
+        <meta charset = "utf-8">
+        <title>交通機関情報</title>
+    </head>
+    <body>
+        <h1>交通機関情報</h1>
+        <p>出発駅<input type="text">駅</p>
+        <input type="radio" name="trans" value="" checked><!--checkedはラジオボタンの初期値-->バス
+        <input type="radio" name="trans" value="" >電車
+		<%= form_tag(new_choice_path,:method => 'get') do %>
+  			<%= text_field_tag :search %>
+ 			 <%= submit_tag '詳細情報' %>
+		<% end %>
+    </body>
+</html>

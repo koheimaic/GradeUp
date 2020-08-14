@@ -1,6 +1,39 @@
-<p>検索</p>
-<%= form_tag(hotels_path,:method => 'get') do %>
-  <%= text_field_tag :search %>
-  <%= submit_tag 'Search' %>
-<% end %>
 
+<!DOCTYPE html>
+<html lang = "ja">
+    <head>
+        <meta charset = "utf-8">
+        <title>わくわく遠征</title>
+        <link rel = "stylesheet" href = "home.css">
+    </head>
+    <body>
+        <div id = "pageBody">
+            <div id = "pageBodyMain">
+                <h1>わくわく遠征</h1>
+                <p><label>人数 <input type="number"><!--入力部分--> 人</label></p>
+                <p><label>予算 <input type="number"><!--入力部分--> 円/人</label></p>
+                <p><label>スポーツ<input type="text"><!--入力部分--> </label></p>
+                <p>場所</p>
+                <input type="radio" name="area" value="" checked><!--checkedはラジオボタンの初期値-->北海道
+                <input type="radio" name="area" value="">東北
+                <input type="radio" name="area" value="" >関東
+                <input type="radio" name="area" value="" >中部
+                <input type="radio" name="area" value="" >近畿
+                <input type="radio" name="area" value="" >中国
+                <input type="radio" name="area" value="" >四国
+                <input type="radio" name="area" value="" >九州・沖縄
+                <p>検索</p>
+				<%= form_tag(hotels_path,:method => 'get') do %>
+  					<%= text_field_tag :search %>
+  					<%= submit_tag 'Search' %>
+				<% end %>
+            </div>
+        </div>
+            <div id = "pageBodysub">
+                <p>ユーザ情報</p>
+                <p>口座残高　　1000円</p>
+                <p>ポイント合計　　500pt</p>
+            </div>
+        </div>
+    </body>
+</html>
