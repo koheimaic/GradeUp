@@ -1,10 +1,10 @@
 class TransportaionsController < ApplicationController
 	
-	def new
+	def index
 	end	
 	
 	def show
-		@transportaion = Transportaion.find(params[:id])
+	#	@transportaion = Transportation.find(params[:id])
 	end		
 	
 end

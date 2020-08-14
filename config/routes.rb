@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   resources :hotels
   resources :hotsprings
   resources :restaurants
-  resources :transportations
+  resources :transportaions
   resources :choice
 end

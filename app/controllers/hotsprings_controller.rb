@@ -1,11 +1,11 @@
 class HotspringsController < ApplicationController
   
    def index
-    @springs = Spring.all
+    @springs = Hotspring.all
   end 
   
   def show
-    @spring = Spring.find(params[:id])
+    @spring = Hotspring.find(params[:id])
   end 
   
 end
