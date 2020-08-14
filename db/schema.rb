@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_14_015827) do
+ActiveRecord::Schema.define(version: 2020_08_14_033626) do
 
   create_table "fees", force: :cascade do |t|
     t.integer "hotel_id"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 2020_08_14_015827) do
     t.integer "phone_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
   end
 
   create_table "transportaions", force: :cascade do |t|
@@ -47,6 +48,7 @@ ActiveRecord::Schema.define(version: 2020_08_14_015827) do
     t.string "transport"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
   end
 
 end
