@@ -1,0 +1,2 @@
+class TransportaionsController < ApplicationController
+end
