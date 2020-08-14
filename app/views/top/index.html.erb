@@ -1,2 +1,6 @@
-ab
-<%= link_to "詳細情報", transportation_path %>
+<p>検索</p>
+<%= form_tag(hotels_path,:method => 'get') do %>
+  <%= text_field_tag :search %>
+  <%= submit_tag 'Search' %>
+<% end %>
+
