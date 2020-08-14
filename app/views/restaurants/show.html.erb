@@ -1,1 +1,10 @@
 レストラン詳細ページ　
+
+<%= @restaurant.name %>
+<%= @restaurant.place %>
+<%= @restaurant.business_hours %>
+<%= @restaurant.phone_number %>
+<%= form_tag(choice_index_path,:method => 'get') do %>
+  <%= text_field_tag :search %>
+  <%= submit_tag '予約' %>
+<% end %>　
