@@ -1,0 +1,2 @@
+class Transportaion < ApplicationRecord
+end
