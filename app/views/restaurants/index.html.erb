@@ -1,2 +1,7 @@
-詳細に遷移
-<%= link_to "詳細情報", @restaurants %>　
+<% @restaurants.each do |restaurant| %>
+  <%= link_to "#{restaurant.name}", restaurant_path(restaurant) %>
+  <%= @restaurant.name %>
+  <%= @restaurant.place %>
+  <%= @restaurant.business_hours %>
+  <%= @restaurant.phone_number %>
+<% end %>　　
