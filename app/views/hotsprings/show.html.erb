@@ -1,3 +1,74 @@
-<%= @spring.name %>
+<html lang = "ja">
+    <head>
+        <meta charset = "utf-8">
+        <link rel = "stylesheet" href = "spring-info.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <title>入浴施設詳細情報</title>
+    </head>
+    <body>
+        <h1><%= @spring.name %></h1>
+        <div class="spring_view">
+          <div class="spring_view_out">
+            <p>施設外観</p>
+            <img src="https://img-cdn.guide.travel.co.jp/article/698/42468/25FEAAA4675B431D8C9E530D3143CF01_LL.jpg" alt = "spring_outview" width = "500" height = "500">
+          </div>
+          <div class="spring_view_in">
+            <p>施設内装</p>
+            <img src="https://www.happuno-yu.com/katsuragi/hotspring/images/003.jpg?v2" alt="spring_inview1">
+            <img src="https://www.hirayama-onsen.jp/wp-content/uploads/2018/10/t_abSlide01.jpg" alt="spring_inview2">
+          </div>
+        </div>
+        <div class="spring_info">
+          <div class="spring_info_access">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21892.582354225273!2d139.74617826380737!3d35.6562201996275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8df62a573d80db6e!2z6YqA5bqn44Kw44Op44Oz44OJ44Ob44OG44Or!5e0!3m2!1sja!2sjp!4v1597374634535!5m2!1sja!2sjp" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
+          <div class="spring_info_table">
+            <table>
+              <tr>
+                <td>料金プラン</td>
+                <td>500円<br>700円<br>1500円</td>
+              </tr>
+              <tr>
+                <td>利用可能アメニティ</td>
+                <td>バスタオル<br>ドライヤー<br>シャンプー<br>ハンドタオル</td>
+              </tr>
+              <tr>
+                <td>インターネット</td>
+                <td>wifiなし</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="spring_select">
+          <h2>料金プラン選択部分</h2>
+          <input type="radio" name="cost" value="500">500円
+          <input type="radio" name="cost" value="700">700円
+          <input type="radio" name="cost" value="1500">1500円
+          <%= link_to "選択画面へ戻る", choice_index_path %>
+        </div>
+        <div class="spring_review">
+          <h2>総合評価 3.5</h2>
+          <table>
+            <tr>
+              <td>20代男性</td>
+              <td>肩こりがめちゃくちゃよくなりました！最高です！</td>
+            </tr>
+            <tr>
+              <td>30代女性</td>
+              <td>高いプランではマッサージも利用できて最高です</td>
+            </tr>
+            <tr>
+              <td>30代男性</td>
+              <td>人が多いのがマイナス点かな…</td>
+            </tr>
+          </table>
+        </div>
+    </body>
+</html>
+(134 kB)
+https://img-cdn.guide.travel.co.jp/article/698/42468/25FEAAA4675B431D8C9E530D3143CF01_LL.jpg
+(214 kB)
+https://www.happuno-yu.com/katsuragi/hotspring/images/003.jpg?v2
+(432 kB)
+
 <%= @spring.place %>
-<%= link_to "選択画面へ戻る", choice_index_path %>

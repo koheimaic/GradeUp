@@ -1,3 +1,63 @@
 // Place all the styles related to the hotsprings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.spring_view {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  padding: 30px;
+}
+.spring_view_in {
+  padding-left: 20px;
+}
+.spring_view img{
+  width: 200px;
+  height: 200px;
+}
+
+.spring_info {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.spring_select_reserve {
+  background-color: purple;
+  color: #fff;
+  padding: 5px;
+  text-align: right;
+}
+a{
+
+  text-decoration: none;
+
+  color: #000;
+
+}
+
+.spring{
+
+  height: 400px;
+
+  padding: 20px;
+
+}
+
+.spring_info{
+
+  display: -webkit-flex;
+
+  display: -ms-flex;
+
+  display: flex;
+
+}
+
+.spring_img{
+
+  width: 200px;
+
+  height: 200px;
+
+  padding-right: 30px;
+
+}

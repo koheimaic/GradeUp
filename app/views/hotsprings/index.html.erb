@@ -1,4 +1,98 @@
 <% @springs.each do |hotspring| %>
-  <%= link_to "#{hotspring.name}", hotspring_path(hotspring) %>
+  <html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <link rel = "stylesheet" href = "list-spring.css">
+    <title>入浴施設一覧</title>
+  </head>
+  <body>
+    <h1>入浴施設一覧</h1>
+    <a href="">
+      <div class="spring">
+        <h2 class="spring_name">  <%= link_to "温泉A", hotspring_path(hotspring) %></h2>
+        <div class="spring_info">
+          <div class="spring_img">
+            <img src="https://www.jalan.net/news/img/2015/12/1601_kyusyu_betsu_anaba1_033-670x443.jpg" alt="spring" class="spring_img">
+          </div>
+          <div class="spring_table">
+            <table>
+              <tr>
+                <td>料金</td>
+                <td>600円</td>
+              </tr>
+              <tr>
+                <td>場所</td>
+                <td>東京都港区</td>
+              </tr>
+              <tr>
+                <td>効能</td>
+                <td>肩こり</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </a>
+    <a href="">
+      <div class="spring">
+        <h2 class="spring_name">温泉B</h2>
+        <div class="spring_info">
+          <div class="spring_img">
+            <img src="https://www.kankou-shimane.com/jp/wp-content/uploads/2017/06/hinokami_tanabe_01.jpg" alt="spring" class="spring_img">
+          </div>
+          <div class="spring_table">
+            <table>
+              <tr>
+                <td>料金</td>
+                <td>500円</td>
+              </tr>
+              <tr>
+                <td>場所</td>
+                <td>東京都港区</td>
+              </tr>
+              <tr>
+                <td>効能</td>
+                <td>古傷</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </a>
+    <a href="">
+      <div class="spring">
+        <h2 class="spring_name">温泉C</h2>
+        <div class="spring_info">
+          <div class="spring_img">
+            <img src="http://xn--u9jt60gba2011b1fac0289b.com/wp-content/uploads/2017/03/IMG_1297.jpg" alt="spring" class="spring_img">
+          </div>
+          <div class="spring_table">
+            <table>
+              <tr>
+                <td>料金</td>
+                <td>500円</td>
+              </tr>
+              <tr>
+                <td>場所</td>
+                <td>東京都港区</td>
+              </tr>
+              <tr>
+                <td>効能</td>
+                <td>冷え性</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </a>
+  </body>
+</html>
+1
+(118 kB)
+https://www.jalan.net/news/img/2015/12/1601_kyusyu_betsu_anaba1_033-670x443.jpg
+(350 kB)
+https://www.kankou-shimane.com/jp/wp-content/uploads/2017/06/hinokami_tanabe_01.jpg
+(2 MB)
+
   <%= hotspring.place %>
 <% end %>

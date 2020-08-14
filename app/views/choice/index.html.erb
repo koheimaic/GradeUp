@@ -1,5 +1,16 @@
-<h2>選択</h2>
-<%= link_to "温泉", hotsprings_path %>
-<%= link_to "飲食", restaurants_path %>
+<html lang = "ja">
+    <head>
+        <meta charset = "utf-8">
+        <title>オプション選択画面</title>
+    </head>
+    <body>
+        <h1>オプション選択画面</h1>
+        <p>必要なオプションを選んでください. </p>
+            <%= link_to "温泉", hotsprings_path %>
+  <%= link_to "飲食", restaurants_path %>
 <%= link_to "交通", transportaions_path %>
 <%= link_to "確定", choice_index_path, method: :post %>
+
+          
+      </body>
+</html>
