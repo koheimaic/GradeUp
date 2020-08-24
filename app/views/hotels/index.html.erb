@@ -1,4 +1,3 @@
-<% @hotels.each do |hotel| %>
   <html lang="ja">
   <head>
     <meta charset="utf-8">
@@ -7,32 +6,33 @@
   </head>
   <body>
     <h1>宿泊施設一覧</h1>
-    <a href="">
-      <div class="hotel">
-        <h2 class="hotel_name">  <%= link_to "#{hotel.name}", hotel_path(hotel) %></h2>
-        <div class="hotel_info">
-          <div class="hotel_img">
-            <img src="https://grandpark-px.jp/yonezawa/images/top/mv1.jpg" alt="hotel" class="hotel_img">
-          </div>
-          <div class="hotel_table">
-            <table>
-              <tr>
-                <td>料金</td>
-                <td>5000円</td>
-              </tr>
-              <tr>
-                <td>場所</td>
-                <td><%= hotel.place %></td>
-              </tr>
-              <tr>
-                <td>空き部屋数</td>
-                <td><%= hotel.vacancy %>部屋</td>
-              </tr>
-            </table>
+    <% @hotels.each do |hotel| %>
+      <a href="">
+        <div class="hotel">
+          <h2 class="hotel_name">  <%= link_to "#{hotel.name}", hotel_path(hotel) %></h2>
+          <div class="hotel_info">
+            <div class="hotel_img">
+              <img src="<%= hotel.image %>" alt="hotel" class="hotel_img">
+            </div>
+            <div class="hotel_table">
+              <table>
+                <tr>
+                  <td>料金</td>
+                  <td>5000円</td>
+                </tr>
+                <tr>
+                  <td>場所</td>
+                  <td><%= hotel.place %></td>
+                </tr>
+                <tr>
+                  <td>空き部屋数</td>
+                  <td><%= hotel.vacancy %>部屋</td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
-      </div>
-    </a>
+      </a>
    
   </body>
 </html>
