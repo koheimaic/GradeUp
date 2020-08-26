@@ -1,7 +1,7 @@
 class HotelsController < ApplicationController
 
   def index
-    @hotels = Hotel.all
+    @hotels=Hotel.where('place  LIKE(?)', "%#{params[:keyword]}%")
   end 
   
   def show
@@ -16,6 +16,8 @@ class HotelsController < ApplicationController
     Hotel.create(configure_parmitted_parameters)
   end 
   
+  def search
+  end 
   
   private
   
