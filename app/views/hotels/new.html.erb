@@ -4,5 +4,13 @@
   <%= f.file_field :image %>
   <%= f.label :place %>
   <%= f.text_field :place %>
+  <%= f.fields_for :fees do |i| %>
+    <%= i.label :hotel_fee1 %>
+    <%= i.number_field :hotel_fee %>
+    <%= i.label :hotel_fee2 %>
+    <%= i.number_field :hotel_fee %>
+    <%= i.label :hotel_fee3 %>
+    <%= i.number_field :hotel_fee %>
+  <% end %>
   <%= f.submit "upload" %>
 <% end %>

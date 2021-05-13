@@ -1,0 +1,69 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+header{
+  height: 50px;
+  padding: 10px 0;
+  background-image: url("header-hote2.jpg");
+  background-size: cover;
+  background-color: rgba(0,0,0,0.3);
+  background-blend-mode: darken;
+  position: relative;
+}
+
+    .header-left{
+      float: left;
+    }
+    
+        .logo{
+          width: 200px;
+          padding: 15px 10px;
+          background-color: rgba(255,255,255,0.85);
+          position: absolute;
+          top: 0px;
+          border-radius: 3px;
+        }
+        .logo:hover{
+          opacity: 0.7;
+        }
+
+    .header-right{
+      float: right;
+      line-height: 50px;
+      margin-right: 10px;
+    }
+  
+        .signUp{
+          background-color: rgb(237,211,167);
+          display: inline-block;
+          border-radius: 25px;
+          padding: 0px 10px;
+          color: white;
+          box-shadow: 0 3px #e0c38c;
+        }
+        .signUp:hover{
+          opacity: 0.8;
+          position: relative;
+          top: 3px;
+          box-shadow: none;
+        }
+
+footer{
+    background-color: rgba(163,163,163,0.5);
+    padding: 30px;
+    clear: left;
+}
+    .footer-wrapper{
+        text-align: center;
+        color: white;
+        font-size: 20px;
+    }
+        
+        #companey{
+            margin-top: 30px;
+        }
+        
+        

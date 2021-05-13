@@ -1,39 +1,49 @@
-<!DOCTYPE html>
-<html lang = "ja">
-    <head>
-        <meta charset = "utf-8">
-        <title>GradeUp</title>
-        <link rel = "stylesheet" href = "home.css">
-    </head>
-    <body>
-        <div id = "pageBody">
-            <div id = "pageBodyMain">
-                <h1>GradeUp</h1>
-                <p><label>人数 <input type="number"><!--入力部分--> 人</label></p>
-                <p><label>予算 <input type="number"><!--入力部分--> 円/人</label></p>
-                <p><label>スポーツ<input type="text"><!--入力部分--> </label></p>
-                <p>場所</p>
-                <input type="radio" name="area" value="" checked><!--checkedはラジオボタンの初期値-->北海道
-                <input type="radio" name="area" value="">東北
-                <input type="radio" name="area" value="" >関東
-                <input type="radio" name="area" value="" >中部
-                <input type="radio" name="area" value="" >近畿
-                <input type="radio" name="area" value="" >中国
-                <input type="radio" name="area" value="" >四国
-                <input type="radio" name="area" value="" >九州・沖縄
-				<%= form_tag(hotels_path,:method => 'get') do %>
-				  <%= label_tag :Place %>
-					<%= text_field_tag :keyword %>
-					<%= submit_tag 'Search' %>
-				<% end %>
-            </div>
+<div class="main">
+  <div class="main-wrapper">
+    <h1>Search</h1>
+      <div class="search">
+        <ul>
+          <li>
+            <label class="word" for="people">人数</label> 
+            <input type="number" id="people">
+            <span class="word">人</span>
+          </li>
+          <li>   
+            <label class="word" for="budget">予算</label>
+            <input type="number" id="budget">
+            <span class="word">円/人</span>       
+          </li>
+          <li>
+            <label class="word" for="sports">スポーツ</label>
+            <input class="box" type="text" id="sports">
+          </li>
+        </ul>
+        <div class="area">
+          <input class="word" type="radio" name="area" value="" id="hokkaido" checked>
+          <label for="hokkaido">北海道</label>
+          <input class="word" type="radio" name="area" value="" id="tohoku">
+          <label for="tohoku">東北</label>
+          <input class="word" type="radio" name="area" value="" id="kanto">
+          <label for="kanto">関東</label>
+          <input class="word" type="radio" name="area" value="" id="chubu">
+          <label for="chubu">中部</label>
+          <input class="word" type="radio" name="area" value="" id="kinki">
+          <label for="kinki">近畿</label>
+          <input class="word" type="radio" name="area" value="" id="chugoku">
+          <label for="chugoku">中国</label>
+          <input class="word" type="radio" name="area" value="" id="shikoku">
+          <label for="shikoku">四国</label>
+          <input class="word" type="radio" name="area" value="" id="kyushu">
+          <label for="kyushu">九州</label>
+          <input class="word" type="radio" name="area" value="" id="okinawa">
+          <label for="okinawa">沖縄</label>
         </div>
-            <div id = "pageBodysub">
-                <p>ユーザ情報</p>
-                <p>口座残高　　1000円</p>
-                <p>ポイント合計　　500pt</p>
-            </div>
-        </div>
-        <%= link_to "Register Hotel", new_hotel_path %>
-    </body>
-</html>
+    	  <%= form_tag(hotels_path,:method => 'get', class: "word") do %>
+    		  <%= label_tag(:keyword, "Place") %>
+    			<%= text_field_tag (:keyword)%>
+    			<%= submit_tag 'Search' %>
+    		<% end %>
+  		</div>
+  </div>
+</div>
+

@@ -10,6 +10,27 @@
   </head>
 
   <body>
+    <header>
+      <div class="container">
+        <div class="header-left">
+          <%=  link_to image_tag('GradeUp.png', class: "logo"), root_path%>
+        </div>
+        <div class="header-right">
+          <%= link_to "R.Hotel", new_hotel_path, class: "signUp" %>
+        </div>
+      </div>
+    </header>
     <%= yield %>
   </body>
+  <footer>
+    <div class="footer-wrapper">
+      <div class="info-wrapper">
+        <p>ユーザ情報</p>
+        <p>口座残高　　1000円</p>
+        <p>ポイント合計　　500pt</p>
+        <p id="companey">Mike.inc</p>
+      </div>
+    </div>
+    
+  </footer>
 </html>

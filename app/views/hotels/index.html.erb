@@ -1,41 +1,21 @@
-  <html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <link rel = "stylesheet" href = "list-hotel.css">
-    <title>宿泊施設一覧</title>
-  </head>
-  <body>
-    <h1>宿泊施設一覧</h1>
+  <div class="index-hotel">
+    <h1>List of Hotels</h1>
     <% @hotels.each do |hotel| %>
-      <a href="">
-        <div class="hotel">
-          <h2 class="hotel_name">  <%= link_to "#{hotel.name}", hotel_path(hotel) %></h2>
-          <div class="hotel_info">
-            <div class="hotel_img">
-              <img src="<%= hotel.image %>" alt="hotel" class="hotel_img">
-            </div>
-            <div class="hotel_table">
-              <table>
-                <tr>
-                  <td>料金</td>
-                  <td>5000円</td>
-                </tr>
-                <tr>
-                  <td>場所</td>
-                  <td><%= hotel.place %></td>
-                </tr>
-                <tr>
-                  <td>空き部屋数</td>
-                  <td><%= hotel.vacancy %>部屋</td>
-                </tr>
-              </table>
-            </div>
-          </div>
+    <div class="hotel">
+      <div class="inner-hotel">
+      　<%= link_to "#{hotel.name}", hotel_path(hotel), class: "hotel-name" %>
+        <div class="hotel-image">
+          <img src="<%= hotel.image %>" alt="hotel" class="hotel_image">
         </div>
-      </a>
-   
-  </body>
-</html>
+        <div class="hotel-table">
+          <ul>
+            <li>料金: 5000円</li>
+            <li>場所: <%= hotel.place %></li>
+            <li>空き部屋数: <%= hotel.vacancy %>部屋</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
 
- 
-<% end %>

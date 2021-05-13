@@ -1,77 +1,39 @@
-<html lang = "ja">
-    <head>
-        <meta charset = "utf-8">
-        <link rel = "stylesheet" href = "hotel-info.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        <title>宿泊施設詳細情報</title>
-    </head>
-    <body>
-        <h1><%= @hotel.name %></h1>
-        <div class="hotel_view">
-          <div class="hotel_view_out">
-            <p>ホテル外観</p>
-            <img src="<%= @hotel.image %>" alt = "hotel_outview" width = "500" height = "500">
-          </div>
-          <div class="hotel_view_in">
-            <p>ホテル内装</p>
-            <img src="https://kinarino.k-img.com/system/press_images/001/400/784/0b014ae25f0562e7e84b6c8904ea55c804f6c805.jpg?1552637855" alt="hotel_inview1">
-            <img src="https://kinarino.k-img.com/system/press_images/001/400/748/b31f0e164f503be25a323450011d18d50271892b.jpg?1552635721" alt="hotel_inview2">
-          </div>
-        </div>
-        <div class="hotel_info">
-          <div class="hotel_info_access">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21892.582354225273!2d139.74617826380737!3d35.6562201996275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8df62a573d80db6e!2z6YqA5bqn44Kw44Op44Oz44OJ44Ob44OG44Or!5e0!3m2!1sja!2sjp!4v1597374634535!5m2!1sja!2sjp" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-          </div>
-          <div class="hotel_info_table">
-            <table>
-              <tr>
-                <td>料金プラン</td>
-                <td>5000円<br>7000円<br>10000円</td>
-              </tr>
-              <tr>
-                <td>利用可能アメニティ</td>
-                <td>タオル<br>ドライヤー<br>シャンプー<br>歯ブラシ</td>
-              </tr>
-              <tr>
-                <td>インターネット</td>
-                <td>wifiあり</td>
-              </tr>
-            </table>
-          </div>
-        </div>
-        <div class="hotel_select">
-          <h2>料金プラン選択部分</h2>
-          <input type="radio" name="cost" value="5000">5000円
-          <input type="radio" name="cost" value="7000">7000円
-          <input type="radio" name="cost" value="10000">10000円
-          <%= form_tag(choice_index_path,:method => 'get') do %>
-  <%= text_field_tag :search %>
-  <%= submit_tag '予約' %>
-<% end %>
-        </div>
-        <div class="hotel_review">
-          <h2>総合評価 3.8</h2>
-          <table>
-            <tr>
-              <td>30代男性</td>
-              <td>部屋の設備は充実していて、とても清潔に保たれていました。 ただ、お風呂について、浴槽の淵が少し高いと感じました…</td>
-            </tr>
-            <tr>
-              <td>30代女性</td>
-              <td>お部屋タイプはおまかせのプランでしたが、改装したばかりのお部屋に泊まることができました。水回りや内装も掃除が…</td>
-            </tr>
-            <tr>
-              <td>30代男性</td>
-              <td>年越しを過ごさせていただきました。チェックインもスムーズに対応くださり、ストレスなく過ごすことができました…</td>
-            </tr>
-          </table>
-        </div>
-    </body>
-</html>
-(37 kB)
-https://kinarino.k-img.com/system/press_images/001/400/784/0b014ae25f0562e7e84b6c8904ea55c804f6c805.jpg?1552637855
-(38 kB)
-
-<%= @hotel.place %>
-<%= @hotel.vacancy %>
->
+<div class="detail-wrapper">
+  <h1><%= @hotel.name %></h1>
+  <div class="dt-contents-wrapper"> 
+  <!--dt=detail-->
+    <div class="dt.image-wrapper">
+      <img src="<%= @hotel.image %>" alt = "hotel_outview" width = "500" height = "500">
+    </div>  
+    <div class="dt-descreption-wrapper">
+      <ul>
+        <h3>料金プラン</h3>
+        <li>5000円</li>
+        <li>7000円</li> 
+        <li>10000円</li>
+        <h3>利用可能アメニティ</h3>
+        <li>タオル</li>
+        <li>ドライヤー</li>
+        <li>シャンプー</li>
+        <li>インターネット</li>
+        <li>Wifi あり</li>
+      </ul>
+    </div>
+    <div class="dt.map-wrapper">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21892.582354225273!2d139.74617826380737!3d35.6562201996275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8df62a573d80db6e!2z6YqA5bqn44Kw44Op44Oz44OJ44Ob44OG44Or!5e0!3m2!1sja!2sjp!4v1597374634535!5m2!1sja!2sjp" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+    <div class="dt.adress-wrapper">
+      
+    </div>
+    <div class="dt.select-wrapper">
+      <h2>料金プラン選択部分</h2>
+      <input type="radio" name="cost" value="5000">5000円
+      <input type="radio" name="cost" value="7000">7000円
+      <input type="radio" name="cost" value="10000">10000円
+      <%= form_tag(choice_index_path,:method => 'get') do %>
+        <%= text_field_tag :search %>
+        <%= submit_tag '予約' %>
+      <% end %>
+    </div>
+  </div>
+</div>

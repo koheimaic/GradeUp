@@ -1,0 +1,55 @@
+// Place all the styles related to the top controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.main{
+  background-image: url("ホテル選択.jpg");
+    height: 600px;
+    background-color: rgba(255,255,255,0.3);
+    background-blend-mode: lighten;
+    padding: 80px 0;
+}
+.main li{
+  list-style: none;
+}
+
+      .main-wrapper{
+        position: relative;
+        top: 80px;
+        background-color: rgba(163,163,163,0.5);
+        border-radius: 20px;
+        width: 50%;
+        margin: auto;
+        color: white;
+        text-align: center;
+      }
+      
+          .main-wrapper h1{
+            font-size: 70px;
+          }
+          
+          .search{
+          }
+          
+              .word{
+                font-size: 30px;
+              }
+              
+              .search input{
+                padding: 10px 0;
+                border-radius: 5px;
+                margin: 0 30px 20px 30px;
+                background-color: #fffffc;
+                border: inset 1px #e5e4e6;
+                display: inline-block;
+              }
+              
+              label:hover{
+                cursor: pointer;
+                opacity: 0.5;
+              }
+              
+              .area input:hover{
+                cursor: pointer;
+              }
+      
